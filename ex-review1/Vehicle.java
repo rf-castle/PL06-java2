@@ -3,8 +3,35 @@ abstract class Vehicle {
     String company;
     String owner;
     String engineType;
-    int tankSize;
-    public abstract String toString();
+    double tankSize;
+    double fuelConsumption;
+    Vehicle(
+            String modelName,
+            String company,
+            String owner,
+            String engineType,
+            double tankSize,
+            double fuelConsumption
+    ){
+        this.modelName = modelName;
+        this.company = company;
+        this.owner = owner;
+        this.engineType = engineType;
+        this.tankSize = tankSize;
+        this.fuelConsumption = fuelConsumption;
+    }
+    public String toString(){
+        return String.format(
+                "ModelName: %s, Company: %s, Owner: %s, EngineType:%s, " +
+                        "TankSize:%.2f, FuelConsumption:%.2f",
+                modelName,
+                company,
+                owner,
+                engineType,
+                tankSize,
+                fuelConsumption
+        );
+    };
     abstract String movableDistance();
     abstract String costFor100Km(PetroleumPrice priceInfo);
     abstract void setAirConON();
@@ -12,10 +39,27 @@ abstract class Vehicle {
 }
 
 class Car extends Vehicle{
+    int numberOfSeat;
+    Car(
+            String modelName,
+            String company,
+            String owner,
+            String engineType,
+            double tankSize,
+            double fuelConsumption,
+            int numberOfSeat
+    ){
+        super(modelName, company, owner, engineType, tankSize, fuelConsumption);
+        this.numberOfSeat = numberOfSeat;
+    }
 
     @Override
     public String toString() {
-        return null;
+        return String.format(
+                "%s, NumberOfSeat: %d",
+                super.toString(),
+                this.numberOfSeat
+        );
     }
 
     @Override
@@ -37,4 +81,9 @@ class Car extends Vehicle{
     void setAirConOFF() {
 
     }
+}
+
+
+class MiniVan extends Vehicle{
+
 }

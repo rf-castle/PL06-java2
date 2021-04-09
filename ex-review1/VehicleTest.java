@@ -5,7 +5,7 @@ public class VehicleTest {
     }
 
     public static void main(String[] args) {
-        Vehicle vehicles[] = {
+        Vehicle[] vehicles = {
                 new Car("Camley", "Toyota", "Suzuki", "Gasoline", 70., 15.15, 5),
                 new Car("Aqua", "Toyota", "Nakajima", "Hybrid", 36., 40.0, 5),
                 new MiniVan("Sienna", "Toyota", "Tanaka", "Gasoline", 75.,  9.0, 8, true),
