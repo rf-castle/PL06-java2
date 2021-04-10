@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class MiniVan extends Vehicle{
     int numberOfSeat;
     boolean hasAutoDoor;
@@ -37,11 +39,16 @@ public class MiniVan extends Vehicle{
 
     @Override
     double costFor100Km(PetroleumPrice priceInfo) {
-        return switch (this.engineType) {
-            case "Gasoline" -> 100 * priceInfo.getGasolinePrice() / this.fuelConsumption;
-            case "Diesel" -> 100 * priceInfo.getDieselPrice() / this.fuelConsumption;
-            default -> 0.0;
-        };
+        if(Objects.equals(this.engineType, "Gasoline")) {
+            return 100 * priceInfo.getGasolinePrice() / this.fuelConsumption;
+        }
+        else if(Objects.equals(this.engineType, "Diesel")) {
+
+            return 100 * priceInfo.getDieselPrice() / this.fuelConsumption;
+        }
+        else{
+            return 0.0;
+        }
     }
 
     @Override
