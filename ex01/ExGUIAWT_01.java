@@ -9,25 +9,16 @@ class MyCanvas extends Canvas {
     }
 
     @Override
-    public void paint(Graphics g){
-        g.setColor(Color.BLUE);
-        g.drawRect(5, 0, 370, 200);
+    public void paint(final Graphics g) {
+        g.clearRect(0, 0, 400, 200);
+        g.setColor(Color.blue);
+        g.drawRect(10, 0, 400 - 20, 200);
         g.setColor(Color.red);
-        g.drawOval(
-                this.center.x - this.radius,
-                this.center.y - this.radius,
-                2 * this.radius, 2 * this.radius
-        );
+        g.drawOval(center.x - this.radius, center.y - this.radius, 2 * this.radius, 2 * this.radius);
         g.setColor(Color.black);
-        g.drawString("The circle:", 120, 75);
-        g.drawString(
-                String.format(
-                    "center = (%d,%d);", this.center.x, this.center.y
-                ),
-                160, 110
-        );
-        g.drawString("radius = " + this.radius, 160, 140);
-
+        g.drawString("The circle:", 140, 90);
+        g.drawString(String.format("center = (%d,%d);", center.x, center.y), 160, 110);
+        g.drawString("radius = " + this.radius, 160, 130);
     }
 }
 
