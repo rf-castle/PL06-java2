@@ -14,7 +14,7 @@ public class ExGUISwing_01 extends JFrame {
     ;
     protected JPanel panel;
     protected JLabel label;
-    JButton[] buttons;
+    protected JButton[] buttons;
     public ExGUISwing_01() {
         super("Car Audio");
         this.setSize(370, 150);
