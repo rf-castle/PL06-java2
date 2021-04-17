@@ -14,6 +14,7 @@ public class ExGUISwing_01 extends JFrame {
     ;
     protected JPanel panel;
     protected JLabel label;
+    JButton[] buttons;
     public ExGUISwing_01() {
         super("Car Audio");
         this.setSize(370, 150);
@@ -44,7 +45,7 @@ public class ExGUISwing_01 extends JFrame {
         this.buttonDown = new JButton("Down");
         this.buttonDown.setLocation(300, 80);
 
-        JButton[] buttons = new JButton[]{
+        this.buttons = new JButton[]{
                 this.buttonPW,
                 this.buttonAM,
                 this.buttonFM,
@@ -52,12 +53,12 @@ public class ExGUISwing_01 extends JFrame {
                 this.buttonUp,
                 this.buttonDown
         };
-        for (JButton button: buttons) {
+        for (JButton button: this.buttons) {
             button.setSize(70, 30);
         }
-        Component[] components = new Component[buttons.length + 1];
-        System.arraycopy(buttons, 0, components, 0, buttons.length);
-        components[buttons.length] = this.panel;
+        Component[] components = new Component[this.buttons.length + 1];
+        System.arraycopy(this.buttons, 0, components, 0, this.buttons.length);
+        components[this.buttons.length] = this.panel;
         for (Component comp: components) {
             this.add(comp);
         }
