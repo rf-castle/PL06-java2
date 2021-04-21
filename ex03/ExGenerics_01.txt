@@ -1,0 +1,3 @@
+num_list内にString型,int型,Point型が含まれている。
+この状態でString型にキャストしようとしても、Point型やint型はキャストできないため
+実行時エラーが発生する。
