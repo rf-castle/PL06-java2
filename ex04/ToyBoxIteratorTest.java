@@ -1,5 +1,4 @@
 import java.util.Iterator;
-import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Vector;
 
@@ -74,14 +73,14 @@ public class ToyBoxIteratorTest {
     }
 
     public static void main(String[] args) {
-        ToyBox<Car> carBox = new ToyBox<Car>();
+        ToyBox<Car> carBox = new ToyBox<>();
         Car t1 = new Car("Yaris", 1500);
         Car t2 = new Car("Corolla", 2500);
         carBox.add(t1);
         carBox.add(t2);
         showToysinBox(carBox);
 
-        ToyBox<Bear> bearBox = new ToyBox<Bear>();
+        ToyBox<Bear> bearBox = new ToyBox<>();
         Bear b1 = new Bear("Bear1", 1000);
         Bear b2 = new Bear("Bear2", 2000);
         bearBox.add(b1);
@@ -90,7 +89,7 @@ public class ToyBoxIteratorTest {
         /* It is OK till now */
 
         // Next, create ToyBox<Toy>
-        ToyBox<Toy> toyBox = new ToyBox<Toy>();
+        ToyBox<Toy> toyBox = new ToyBox<>();
 
         Car t3 = new Car("Tacoma", 3300);
         Bear b3 = new Bear("Bear3", 1200);
@@ -121,7 +120,7 @@ class Toy {
     }
 
     public String toString() {
-        return new String("Name= " + name + ", price= " + price);
+        return "Name= " + name + ", price= " + price;
     }
 }
 
