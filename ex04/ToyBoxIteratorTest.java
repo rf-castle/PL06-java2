@@ -21,7 +21,7 @@ class ToyBox<T> implements Iterable<T> /* Insert code for being iterable class *
     /* write code for iterator method -- it returns an object of the ToyBoxIterator */
     // ...................................
     public Iterator<T>  iterator()  {
-        return new ToyBox.ToyBoxIterator();
+        return new ToyBoxIterator();
     }
 
     // ToyBoxIterator class -- inner class
