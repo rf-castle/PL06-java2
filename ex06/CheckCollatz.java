@@ -13,8 +13,15 @@ public class CheckCollatz {
 
     // Check the conjecture for 1 <= i <= n
     public static boolean check(BigInteger n) {
-        // TODO Complete Check
-        return false;
+        BigInteger i = BigInteger.ONE;
+        while (i.compareTo(n) <= 0){
+            Result result = Collatz.check(n);
+            if(!result.valid){
+                return false;
+            }
+            i = i.add(BigInteger.ONE);
+        }
+        return true;
     }
 
 
@@ -30,7 +37,7 @@ public class CheckCollatz {
         long start_time = new Date().getTime();
         boolean v = CheckCollatz.check(new BigInteger(args[0]));
         long end_time = new Date().getTime();
-        System.out.println("Ellapsed time: " + (end_time-start_time) + "ms");
+        System.out.println("Elapsed time: " + (end_time-start_time) + "ms");
 
         if (v) {
             System.out.println("The conjecture seems valid up to n="+args[0]);

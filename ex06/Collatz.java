@@ -29,9 +29,9 @@ public class Collatz {
 
     public static Result check(BigInteger n) {
         // Set to mark the visited elements
-        HashSet<BigInteger> visited = new HashSet<BigInteger>();
+        HashSet<BigInteger> visited = new HashSet<>();
         // Sequence of the visited numbers in order
-        ArrayList<BigInteger> sequence = new ArrayList<BigInteger>();
+        ArrayList<BigInteger> sequence = new ArrayList<>();
         return check(n, visited, sequence);
     }
 
