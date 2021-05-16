@@ -1,5 +1,4 @@
 import java.util.Random;
-// TODO COMPLETE
 //
 // "Transfer" threads select a random amount of money in [0, max_amount]
 // and transfer it to a random account in the bank.
