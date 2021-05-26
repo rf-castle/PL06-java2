@@ -13,7 +13,10 @@ public class LambdaExpressionExercise {
                 System.out.println("Fail");
             }
         };
-
+        System.out.println(tester.operate(5, 10, thirdPower));
+        System.out.println(tester.operate(3, 5, squareRoot));
+        System.out.println(tester.operate(5, 10, squareRoot));
+        System.out.println(tester.operate(5, 10, power));
         passFailService1.showMessage(70);
         passFailService1.showMessage(50);
     }
